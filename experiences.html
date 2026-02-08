@@ -4,77 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiences | Rainforest Experience</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    <title>Experiences | Tinchuley Gurung Homestay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&family=Lato:wght@300;400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .page-content {
-            padding: 150px 10%;
-            max-width: 800px;
-            z-index: 20;
-            position: relative;
-        }
-
-        .back-btn {
-            position: fixed;
-            top: 40px;
-            right: 40px;
-            cursor: pointer;
-            z-index: 100;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.2rem;
-            border-bottom: 1px solid white;
-            padding-bottom: 5px;
-            color: white;
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body class="subpage">
-    <div id="app">
-        <canvas id="canvas"></canvas>
-        <a href="index.html" class="back-btn">Back to Home</a>
+    <header class="header">
+        <a href="index.html" class="logo">RAINFOREST</a>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="food-dining.html">Food & Dining</a>
+        </nav>
+    </header>
 
-        <header>
-            <div class="logo">RAINFOREST</div>
-        </header>
+    <main class="page-container">
+        <!-- Hero Section -->
+        <section class="hero" style="background-image: url('assets/experiences_1.jpg'); background-position: center;">
+        </section>
 
-        <main class="page-content">
-            <h2 class="sub-title">EXPLORE</h2>
-            <h1 class="main-title">EXPERIENCES</h1>
-            <div class="description" style="max-width: 100%; opacity: 1;">
-                <p>Adventure awaits in the canopy. More content coming soon...</p>
+        <section class="subpage-content">
+            <h1>Curated Experiences</h1>
+            <p class="about-text">
+                Immerse yourself in the rhythm of the mountains. From misty nature trails to vibrant cultural exchanges,
+                we offer a range of activities designed to connect you deeply with Tinchuley's serene landscape.
+            </p>
+
+            <!-- Experiences Container -->
+            <div class="rooms-container">
+                <!-- Experience 1: Nature Walks -->
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url('assets/experiences_2.jpg');"></div>
+                    <div class="room-details">
+                        <h2>Village Walks & Nature Trails</h2>
+                        <p class="price" style="color: var(--warm-color); font-size: 1.2rem;">Guided Exploration</p>
+                        <p class="description">
+                            Wander through ancient pine forests and interact with the friendly local community. Our
+                            guided village walks offer a glimpse into the serene lifestyle of Tinchuley, where time
+                            slows down and nature takes center stage.
+                        </p>
+                        <ul class="amenities-list">
+                            <li>Pine Forest Trails</li>
+                            <li>Bird Watching</li>
+                            <li>Local Interaction</li>
+                            <li>Fresh Mountain Air</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2: Tea Gardens -->
+                <div class="room-card reverse">
+                    <div class="room-image" style="background-image: url('assets/bg2.jpg');"></div>
+                    <div class="room-details">
+                        <h2>Tea Garden Visits</h2>
+                        <p class="price" style="color: var(--warm-color); font-size: 1.2rem;">Aromatic Journey</p>
+                        <p class="description">
+                            Visit the lush tea estates surrounding our homestay, such as the renowned Peshok Tea Garden.
+                            Witness the art of tea plucking and processing, and savor the aroma of world-famous
+                            Darjeeling tea right at its source.
+                        </p>
+                        <ul class="amenities-list">
+                            <li>Tea Plucking</li>
+                            <li>Factory Visits</li>
+                            <li>Scenic Photography</li>
+                            <li>Tea Tasting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3: Sunrise Views -->
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url('assets/bg3.jpg');"></div>
+                    <div class="room-details">
+                        <h2>Sunrise at Tinchuley Viewpoint</h2>
+                        <p class="price" style="color: var(--warm-color); font-size: 1.2rem;">Kanchenjunga Views</p>
+                        <p class="description">
+                            Wake up early for a short hike to the Tinchuley Viewpoint. Watch the sky ignite with colors
+                            as the sun rises over the majestic Kanchenjunga range, illuminating the snow-capped peaks in
+                            golden hues.
+                        </p>
+                        <ul class="amenities-list">
+                            <li>Panoramic Views</li>
+                            <li>Himalayan Peaks</li>
+                            <li>Golden Hour</li>
+                            <li>Meditation Spot</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4: Night Sky -->
+                <div class="room-card reverse">
+                    <div class="room-image" style="background-image: url('assets/bonfire.png');"></div>
+                    <div class="room-details">
+                        <h2>Stargazing & Bonfires</h2>
+                        <p class="price" style="color: var(--warm-color); font-size: 1.2rem;">Evening Magic</p>
+                        <p class="description">
+                            As night falls, gather around a warm bonfire under a blanket of stars. Tinchuley's minimal
+                            light pollution makes it a perfect spot for stargazing, sharing stories, and enjoying the
+                            tranquility of the mountains.
+                        </p>
+                        <ul class="amenities-list">
+                            <li>Bonfire Arrangement</li>
+                            <li>Music & Stories</li>
+                            <li>Clear Night Skies</li>
+                            <li>Cozy Atmosphere</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </main>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('canvas').appendChild(renderer.domElement);
-
-        const tex = new THREE.TextureLoader().load('assets/bg1.jpg');
-        const geometry = new THREE.PlaneGeometry(2, 2);
-        const material = new THREE.MeshBasicMaterial({ map: tex, color: 0x333333 });
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-        camera.position.z = 1;
-
-        function animate() { requestAnimationFrame(animate); renderer.render(scene, camera); }
-        animate();
-
-        gsap.from(".main-title", { opacity: 0, y: 50, duration: 1.5, ease: "power4.out" });
-        gsap.from(".sub-title", { opacity: 0, x: -30, duration: 1, delay: 0.5 });
-        gsap.from(".description", { opacity: 0, duration: 2, delay: 1 });
-    </script>
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h2>Ready to explore Tinchuley?</h2>
+                    <p>Let us help you plan your itinerary. Whether you seek adventure or relaxation, we have the
+                        perfect experience waiting for you.</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+919434380974" class="cta-btn">
+                            <span>&#9742;</span> +91 94343 80974
+                        </a>
+                        <a href="https://wa.me/919733000447" target="_blank" class="cta-btn">
+                            <span>&#128172;</span> +91 97330 00447
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
