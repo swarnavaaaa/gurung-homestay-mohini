@@ -55,8 +55,17 @@ body.subpage {
     overflow-y: auto;
 }
 
+/* Subpage Specific Header Styling */
+body.subpage .header {
+    background-color: var(--bg-color);
+    /* Solid background for subpages */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for separation */
+}
+
 .page-container {
-    padding-top: 0;
+    padding-top: 100px;
+    /* Push content down below fixed header */
 }
 
 .hero {
@@ -74,7 +83,8 @@ body.subpage {
 }
 
 .subpage-content {
-    padding: 80px 10%;
+    padding: 60px 10%;
+    /* Reduced padding slightly */
     text-align: center;
     background-color: var(--bg-color);
 }
@@ -123,6 +133,7 @@ body.subpage {
     /* Hide scrollbar Chrome/Safari */
 }
 
+/* Card Updates */
 .card {
     flex: 0 0 calc(50% - 15px);
     /* 2 cards with gap */
@@ -130,10 +141,12 @@ body.subpage {
     /* Gap between cards */
     background-color: #F8F1E7;
     color: #3E2F28;
-    padding: 30px;
+    padding: 25px;
+    /* Slightly reduced padding */
     border-radius: 12px;
     text-align: left;
-    height: 380px;
+    height: 320px;
+    /* Reduced from 380px */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -204,13 +217,14 @@ body.subpage {
     opacity: 0.9;
 }
 
-/* CTA Section */
+/* CTA Section Update */
 .cta-section {
     margin-top: 80px;
     position: relative;
     width: 100%;
     min-height: 400px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/bonfire.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/cta_bg.jpg');
+    /* New image */
     background-size: cover;
     background-position: center;
     border-radius: 20px;
