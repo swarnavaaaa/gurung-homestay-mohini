@@ -4,77 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accommodation | Rainforest Experience</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    <title>Accommodation | Tinchuley Gurung Homestay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&family=Lato:wght@300;400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .page-content {
-            padding: 150px 10%;
-            max-width: 800px;
-            z-index: 20;
-            position: relative;
-        }
-
-        .back-btn {
-            position: fixed;
-            top: 40px;
-            right: 40px;
-            cursor: pointer;
-            z-index: 100;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.2rem;
-            border-bottom: 1px solid white;
-            padding-bottom: 5px;
-            color: white;
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body class="subpage">
-    <div id="app">
-        <canvas id="canvas"></canvas>
-        <a href="index.html" class="back-btn">Back to Home</a>
+    <header class="header">
+        <a href="index.html" class="logo">RAINFOREST</a>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="food-dining.html">Food & Dining</a>
+        </nav>
+    </header>
 
-        <header>
-            <div class="logo">RAINFOREST</div>
-        </header>
+    <main class="page-container">
+        <!-- Hero Section -->
+        <section class="hero" style="background-image: url('assets/bg3.jpg'); background-position: center bottom;">
+        </section>
 
-        <main class="page-content">
-            <h2 class="sub-title">STAY</h2>
-            <h1 class="main-title">ACCOMMODATION</h1>
-            <div class="description" style="max-width: 100%; opacity: 1;">
-                <p>Experience the luxury of nature. More content coming soon...</p>
+        <section class="subpage-content">
+            <h1>Our Accommodation</h1>
+            <p class="about-text">
+                Experience the perfect blend of comfort and nature. Our homestay offers well-appointed rooms designed to
+                provide you with a peaceful retreat amidst the Himalayan beauty.
+            </p>
+
+            <!-- Room Types Section -->
+            <div class="rooms-container">
+                <!-- Room Card 1 -->
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url('assets/bg2.jpg');"></div>
+                    <div class="room-details">
+                        <h2>Scenic Outlook Rooms</h2>
+                        <p class="price">₹2,750 <span>/ night</span></p>
+                        <p class="description">
+                            Wake up to breathtaking views of the Kanchenjunga and the rolling tea gardens.
+                            Our Scenic Outlook rooms offer spacious interiors, large windows, and a private balcony to
+                            soak in the misty mountain air.
+                            Perfect for nature lovers seeking a visual treat.
+                        </p>
+                        <ul class="amenities-list">
+                            <li>4 Rooms Available</li>
+                            <li>Panaromic Mountain Views</li>
+                            <li>Private Balcony</li>
+                            <li>Attached Western Bathroom</li>
+                        </ul>
+                        <a href="tel:+919434380974" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div class="room-card reverse">
+                    <div class="room-image" style="background-image: url('assets/homestay.jpg');"></div>
+                    <div class="room-details">
+                        <h2>Inward Facing Rooms</h2>
+                        <p class="price">₹1,650 <span>/ night</span></p>
+                        <p class="description">
+                            Designed for travelers who prefer a cozy, quiet sanctuary. These rooms face our beautiful
+                            inner courtyard and garden,
+                            offering a warm and intimate atmosphere. Ideal for reading, relaxing, and enjoying a
+                            peaceful night's sleep.
+                        </p>
+                        <ul class="amenities-list">
+                            <li>4 Rooms Available</li>
+                            <li>Garden View</li>
+                            <li>Cozy & Warm Interiors</li>
+                            <li>Attached Western Bathroom</li>
+                        </ul>
+                        <a href="tel:+919434380974" class="book-btn">Book Now</a>
+                    </div>
+                </div>
             </div>
-        </main>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('canvas').appendChild(renderer.domElement);
+            <!-- Policies / Info Grid -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Check-in / Check-out</h3>
+                    <p>Check-in: 12:00 PM<br>Check-out: 11:00 AM</p>
+                </div>
+                <div class="info-item">
+                    <h3>House Rules</h3>
+                    <p>No smoking inside rooms.<br>Pets allowed on request.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Child Policy</h3>
+                    <p>Children under 5 years stay free.<br>5-10 years: 50% meal charge.</p>
+                </div>
+            </div>
 
-        const tex = new THREE.TextureLoader().load('assets/bg2.jpg');
-        const geometry = new THREE.PlaneGeometry(2, 2);
-        const material = new THREE.MeshBasicMaterial({ map: tex, color: 0x333333 });
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-        camera.position.z = 1;
-
-        function animate() { requestAnimationFrame(animate); renderer.render(scene, camera); }
-        animate();
-
-        gsap.from(".main-title", { opacity: 0, y: 50, duration: 1.5, ease: "power4.out" });
-        gsap.from(".sub-title", { opacity: 0, x: -30, duration: 1, delay: 0.5 });
-        gsap.from(".description", { opacity: 0, duration: 2, delay: 1 });
-    </script>
+            <!-- CTA Section (Reused) -->
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h2>Ready to book your stay?</h2>
+                    <p>Contact us directly to reserve your room and get the best rates for your dates.</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+919434380974" class="cta-btn">
+                            <span>&#9742;</span> +91 94343 80974
+                        </a>
+                        <a href="https://wa.me/919733000447" target="_blank" class="cta-btn">
+                            <span>&#128172;</span> +91 97330 00447
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
