@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Dining | Rainforest Experience</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-content {
+            padding: 150px 10%;
+            max-width: 800px;
+            z-index: 20;
+            position: relative;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            cursor: pointer;
+            z-index: 100;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body class="subpage">
+    <div id="app">
+        <canvas id="canvas"></canvas>
+        <a href="index.html" class="back-btn">Back to Home</a>
+
+        <header>
+            <div class="logo">RAINFOREST</div>
+        </header>
+
+        <main class="page-content">
+            <h2 class="sub-title">CULINARY</h2>
+            <h1 class="main-title">FOOD & DINING</h1>
+            <div class="description" style="max-width: 100%; opacity: 1;">
+                <p>Taste the essence of the forest. More content coming soon...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas').appendChild(renderer.domElement);
+
+        const tex = new THREE.TextureLoader().load('assets/bg2.jpg');
+        const geometry = new THREE.PlaneGeometry(2, 2);
+        const material = new THREE.MeshBasicMaterial({ map: tex, color: 0x333333 });
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+        camera.position.z = 1;
+
+        function animate() { requestAnimationFrame(animate); renderer.render(scene, camera); }
+        animate();
+
+        gsap.from(".main-title", { opacity: 0, y: 50, duration: 1.5, ease: "power4.out" });
+        gsap.from(".sub-title", { opacity: 0, x: -30, duration: 1, delay: 0.5 });
+        gsap.from(".description", { opacity: 0, duration: 2, delay: 1 });
+    </script>
+</body>
+
+</html>
