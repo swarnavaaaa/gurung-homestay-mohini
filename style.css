@@ -99,11 +99,23 @@ body.subpage {
 .carousel-container {
     width: 100%;
     margin-top: 40px;
-    overflow-x: auto;
-    padding-bottom: 20px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    /* Hide scrollbar Firefox */
+    position: relative;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+    /* Space for arrows */
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -111,34 +123,69 @@ body.subpage {
     /* Hide scrollbar Chrome/Safari */
 }
 
-.carousel-track {
-    display: flex;
-    gap: 20px;
-    padding: 0 5%;
-    min-width: min-content;
-    /* Ensure track stretches */
-}
-
 .card {
-    flex: 0 0 350px;
+    flex: 0 0 calc(50% - 15px);
+    /* 2 cards with gap */
+    margin-right: 30px;
+    /* Gap between cards */
     background-color: #F8F1E7;
-    /* Light beige/cream card from user image */
     color: #3E2F28;
-    /* Dark brown/earthy text for contrast */
     padding: 30px;
     border-radius: 12px;
     text-align: left;
-    transition: transform 0.3s ease;
-    cursor: grab;
     height: 380px;
-    /* Fixed height for uniform look */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    user-select: none;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* Arrow Navigation */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.carousel-arrow:hover {
+    opacity: 1;
+}
+
+.carousel-arrow.prev {
+    left: 0;
+}
+
+.carousel-arrow.next {
+    right: 0;
+}
+
+/* Dots Pagination */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(254, 254, 227, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--text-color);
 }
 
 .card h3 {
@@ -155,6 +202,90 @@ body.subpage {
     font-size: 0.95rem;
     line-height: 1.6;
     opacity: 0.9;
+}
+
+/* CTA Section */
+.cta-section {
+    margin-top: 80px;
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/bonfire.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px;
+    text-align: left;
+    color: white;
+    overflow: hidden;
+}
+
+.cta-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.cta-content h2 {
+    font-family: var(--font-main);
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #C68E83;
+    /* Muted rose/brown from image context */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    transition: background-color 0.3s transform 0.2s;
+}
+
+.cta-btn:hover {
+    background-color: #B07A6F;
+    transform: translateY(-2px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 100%;
+        /* 1 card on mobile */
+        margin-right: 0;
+    }
+
+    .cta-section {
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
 }
 
 #slide1 {
