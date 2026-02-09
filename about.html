@@ -214,75 +214,104 @@
             const dotsContainer = document.querySelector('.carousel-dots');
             const prevBtn = document.querySelector('.carousel-arrow.prev');
             const nextBtn = document.querySelector('.carousel-arrow.next');
+            const carouselContainer = document.querySelector('.carousel-container');
 
             let currentIndex = 0;
-            const cardsPerView = window.innerWidth > 768 ? 2 : 1;
-            const totalSlides = Math.ceil(cards.length / cardsPerView);
+            let cardsPerView = window.innerWidth > 768 ? 2 : 1;
+            let totalSlides = Math.ceil(cards.length / cardsPerView);
+            let autoScrollInterval;
 
             // Create dots
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('div');
-                dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => {
-                    currentIndex = i;
-                    updateCarousel();
-                });
-                dotsContainer.appendChild(dot);
+            function createDots() {
+                dotsContainer.innerHTML = '';
+                for (let i = 0; i < totalSlides; i++) {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => {
+                        currentIndex = i;
+                        updateCarousel();
+                        resetAutoScroll();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
             }
 
+            createDots();
             const dots = document.querySelectorAll('.dot');
 
             function updateCarousel() {
-                const cardWidth = cards[0].offsetWidth; // Width of one card
-                const gap = 30; // Margin right
-                // Correction for last slide to not scroll too far if not needed, 
-                // but simple transform is usually enough.
-                // Distance to move = index * (cardWidth * cardsPerView + gaps)
-                // Actually easier: calculate percentage or pixel distance based on wrapper width
-
-                // Let's use simple index based logic since we have fixed 2 cards view
-                // Move by 1 'view' (2 cards) width
-                const wrapperWidth = document.querySelector('.carousel-wrapper').offsetWidth;
-                const moveAmount = currentIndex * (wrapperWidth + 30); // + gap compensation if needed?
-
-                // Better approach with flex gap:
-                // transformX = -(currentIndex * (100% + gap)) ?? 
-                // Since container is responsive, let's use percentage.
-                // 1 slide = 100% of wrapper.
-                track.style.transform = `translateX(-${currentIndex * 100}%)`; // wrapper hides overflow
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
                 // Update dots
-                dots.forEach((dot, index) => {
+                document.querySelectorAll('.dot').forEach((dot, index) => {
                     dot.classList.toggle('active', index === currentIndex);
                 });
             }
 
-            nextBtn.addEventListener('click', () => {
+            function nextSlide() {
                 if (currentIndex < totalSlides - 1) {
                     currentIndex++;
-                    updateCarousel();
                 } else {
                     currentIndex = 0;
-                    updateCarousel();
                 }
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = totalSlides - 1;
+                }
+                updateCarousel();
+            }
+
+            // Autoscroll functionality
+            function startAutoScroll() {
+                autoScrollInterval = setInterval(() => {
+                    nextSlide();
+                }, 5000); // 5 seconds
+            }
+
+            function stopAutoScroll() {
+                clearInterval(autoScrollInterval);
+            }
+
+            function resetAutoScroll() {
+                stopAutoScroll();
+                startAutoScroll();
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoScroll();
             });
 
             prevBtn.addEventListener('click', () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateCarousel();
-                } else {
-                    currentIndex = totalSlides - 1;
+                prevSlide();
+                resetAutoScroll();
+            });
+
+            // Pause autoscroll on hover
+            carouselContainer.addEventListener('mouseenter', stopAutoScroll);
+            carouselContainer.addEventListener('mouseleave', startAutoScroll);
+
+            // Handle resize
+            window.addEventListener('resize', () => {
+                const newCardsPerView = window.innerWidth > 768 ? 2 : 1;
+                if (newCardsPerView !== cardsPerView) {
+                    cardsPerView = newCardsPerView;
+                    totalSlides = Math.ceil(cards.length / cardsPerView);
+                    currentIndex = 0;
+                    createDots();
                     updateCarousel();
                 }
             });
 
-            // Handle Resize
-            window.addEventListener('resize', () => {
-                // Ideally reload logic but for now simple refresh
-                // window.location.reload(); 
-            });
+            // Start autoscroll
+            startAutoScroll();
         });
     </script>
 </body>
