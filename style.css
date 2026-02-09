@@ -509,15 +509,16 @@ body.subpage .nav-menu a:hover {
 }
 
 .directions-btn {
-    padding: 10px 20px;
+    padding: 8px 16px;
+    /* Reduced from 10px 20px */
     background: var(--accent);
-    /* Ember highlights */
     color: var(--midnight-pine);
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
     display: inline-block;
     border: none;
+    width: fit-content;
 }
 
 .social-icons {
@@ -591,5 +592,59 @@ body.subpage .nav-menu a:hover {
     .footer-links-group {
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* Policy Card Styles */
+.policy-card-container {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.policy-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.policy-section {
+    margin-bottom: 30px;
+}
+
+.policy-section:last-child {
+    margin-bottom: 0;
+}
+
+.policy-section h3 {
+    font-family: var(--font-main);
+    color: var(--brand-primary);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.policy-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .policy-card {
+        padding: 30px 20px;
+    }
+
+    .policy-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .policy-section p {
+        font-size: 1rem;
     }
 }
