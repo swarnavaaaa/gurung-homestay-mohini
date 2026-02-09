@@ -830,4 +830,16 @@ body.subpage .nav-menu a:hover {
         width: 300px;
         padding: 20px;
     }
+}/* Quote slide style */
+.content .quote-slide {
+    font-family: 'Tinos', serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-style: italic;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+    text-transform: none;
+    /* Override if inherited */
+    letter-spacing: normal;
 }
