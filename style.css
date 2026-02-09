@@ -159,8 +159,8 @@ body.subpage .nav-menu a:hover {
 
 /* Card Updates - White background, Green text */
 .card {
-    flex: 0 0 calc(50% - 15px);
-    /* 2 cards with gap mechanism */
+    flex: 0 0 calc(50% - 18px);
+    /* Safety buffer to prevent clipping */
     background-color: #fff;
     /* Pure white card for contrast against cream bg */
     border: 1px solid rgba(44, 110, 73, 0.1);
@@ -600,7 +600,7 @@ body.subpage .nav-menu a:hover {
 
 .footer-column a {
     display: block;
-    color: var(--text-color);
+    color: #ffffff;
     text-decoration: none;
     margin-bottom: 10px;
     opacity: 0.8;
@@ -620,7 +620,7 @@ body.subpage .nav-menu a:hover {
 .social-icons a {
     font-size: 1.2rem;
     display: inline-block;
-    color: var(--text-color);
+    color: #ffffff;
 }
 
 .footer-bottom {
