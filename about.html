@@ -36,39 +36,62 @@
                 surrounded by high pine forests and lush tea gardens.
             </p>
 
-            <div class="carousel-container">
-                <button class="carousel-arrow prev" aria-label="Previous Slide">&#10094;</button>
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        <div class="card">
-                            <h3>Experience Warm Gurung Hospitality & Genuine Care</h3>
-                            <p>At Tinchuley Gurung Homestay, the heart of our hospitality is the warm embrace of the
-                                Gurung family. Every guest is treated like family, ensuring they feel not just welcomed,
-                                but truly at home.</p>
-                        </div>
-                        <div class="card">
-                            <h3>Embrace Nature's & Connect with the Himalayas</h3>
-                            <p>Nature is our constant companion. With breathtaking sunrise views, serene village walks,
-                                and stargazing under the clear night sky, you'll find yourself immersed in the natural
-                                wonders of Tinchuley.</p>
-                        </div>
-                        <div class="card">
-                            <h3>Savor Authentic Local Flavors Organic Home-Cooked Meals</h3>
-                            <p>Our meals are more than just sustenance; they are a taste of Darjeeling's culture.
-                                Prepared with locally sourced, organic ingredients, our home-cooked meals are a culinary
-                                journey that reflects the heart and soul of our region.</p>
-                        </div>
-                        <div class="card">
-                            <h3>Immerse in Local Traditions with Authentic Cultural Experiences</h3>
-                            <p>Discover the heart and soul of a destination as you immerse yourself in local traditions
-                                through our authentic cultural experiences. Let the rich tapestry of heritage and
-                                customs come to life, making your journey a truly memorable and enriching one.</p>
-                        </div>
+
+            <!-- Why Choose Us Marquee -->
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <div class="card">
+                        <h3>Experience Warm Gurung Hospitality & Genuine Care</h3>
+                        <p>At Tinchuley Gurung Homestay, the heart of our hospitality is the warm embrace of the
+                            Gurung family. Every guest is treated like family, ensuring they feel not just welcomed,
+                            but truly at home.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Embrace Nature's & Connect with the Himalayas</h3>
+                        <p>Nature is our constant companion. With breathtaking sunrise views, serene village walks,
+                            and stargazing under the clear night sky, you'll find yourself immersed in the natural
+                            wonders of Tinchuley.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Savor Authentic Local Flavors Organic Home-Cooked Meals</h3>
+                        <p>Our meals are more than just sustenance; they are a taste of Darjeeling's culture.
+                            Prepared with locally sourced, organic ingredients, our home-cooked meals are a culinary
+                            journey that reflects the heart and soul of our region.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Immerse in Local Traditions with Authentic Cultural Experiences</h3>
+                        <p>Discover the heart and soul of a destination as you immerse yourself in local traditions
+                            through our authentic cultural experiences. Let the rich tapestry of heritage and
+                            customs come to life, making your journey a truly memorable and enriching one.</p>
+                    </div>
+                    <!-- Duplicate cards for seamless loop -->
+                    <div class="card">
+                        <h3>Experience Warm Gurung Hospitality & Genuine Care</h3>
+                        <p>At Tinchuley Gurung Homestay, the heart of our hospitality is the warm embrace of the
+                            Gurung family. Every guest is treated like family, ensuring they feel not just welcomed,
+                            but truly at home.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Embrace Nature's & Connect with the Himalayas</h3>
+                        <p>Nature is our constant companion. With breathtaking sunrise views, serene village walks,
+                            and stargazing under the clear night sky, you'll find yourself immersed in the natural
+                            wonders of Tinchuley.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Savor Authentic Local Flavors Organic Home-Cooked Meals</h3>
+                        <p>Our meals are more than just sustenance; they are a taste of Darjeeling's culture.
+                            Prepared with locally sourced, organic ingredients, our home-cooked meals are a culinary
+                            journey that reflects the heart and soul of our region.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Immerse in Local Traditions with Authentic Cultural Experiences</h3>
+                        <p>Discover the heart and soul of a destination as you immerse yourself in local traditions
+                            through our authentic cultural experiences. Let the rich tapestry of heritage and
+                            customs come to life, making your journey a truly memorable and enriching one.</p>
                     </div>
                 </div>
-                <button class="carousel-arrow next" aria-label="Next Slide">&#10095;</button>
-                <div class="carousel-dots"></div>
             </div>
+
 
             <!-- Travelers Stories Section -->
             <div class="stories-section">
@@ -207,113 +230,11 @@
         </div>
     </footer>
 
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const track = document.querySelector('.carousel-track');
-            const cards = document.querySelectorAll('.card');
-            const dotsContainer = document.querySelector('.carousel-dots');
-            const prevBtn = document.querySelector('.carousel-arrow.prev');
-            const nextBtn = document.querySelector('.carousel-arrow.next');
-            const carouselContainer = document.querySelector('.carousel-container');
-
-            let currentIndex = 0;
-            let cardsPerView = window.innerWidth > 768 ? 2 : 1;
-            let totalSlides = Math.ceil(cards.length / cardsPerView);
-            let autoScrollInterval;
-
-            // Create dots
-            function createDots() {
-                dotsContainer.innerHTML = '';
-                for (let i = 0; i < totalSlides; i++) {
-                    const dot = document.createElement('div');
-                    dot.classList.add('dot');
-                    if (i === 0) dot.classList.add('active');
-                    dot.addEventListener('click', () => {
-                        currentIndex = i;
-                        updateCarousel();
-                        resetAutoScroll();
-                    });
-                    dotsContainer.appendChild(dot);
-                }
-            }
-
-            createDots();
-            const dots = document.querySelectorAll('.dot');
-
-            function updateCarousel() {
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-                // Update dots
-                document.querySelectorAll('.dot').forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentIndex);
-                });
-            }
-
-            function nextSlide() {
-                if (currentIndex < totalSlides - 1) {
-                    currentIndex++;
-                } else {
-                    currentIndex = 0;
-                }
-                updateCarousel();
-            }
-
-            function prevSlide() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                } else {
-                    currentIndex = totalSlides - 1;
-                }
-                updateCarousel();
-            }
-
-            // Autoscroll functionality
-            function startAutoScroll() {
-                autoScrollInterval = setInterval(() => {
-                    nextSlide();
-                }, 5000); // 5 seconds
-            }
-
-            function stopAutoScroll() {
-                clearInterval(autoScrollInterval);
-            }
-
-            function resetAutoScroll() {
-                stopAutoScroll();
-                startAutoScroll();
-            }
-
-            // Event listeners
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetAutoScroll();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetAutoScroll();
-            });
-
-            // Pause autoscroll on hover
-            carouselContainer.addEventListener('mouseenter', stopAutoScroll);
-            carouselContainer.addEventListener('mouseleave', startAutoScroll);
-
-            // Handle resize
-            window.addEventListener('resize', () => {
-                const newCardsPerView = window.innerWidth > 768 ? 2 : 1;
-                if (newCardsPerView !== cardsPerView) {
-                    cardsPerView = newCardsPerView;
-                    totalSlides = Math.ceil(cards.length / cardsPerView);
-                    currentIndex = 0;
-                    createDots();
-                    updateCarousel();
-                }
-            });
-
-            // Start autoscroll
-            startAutoScroll();
-        });
+        // Marquee is now handled by CSS animation for a smooth continuous loop
     </script>
+
 </body>
 
 </html>
