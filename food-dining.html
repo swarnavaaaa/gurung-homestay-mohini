@@ -4,77 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food & Dining | Rainforest Experience</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    <title>Food & Dining | Tinchuley Gurung Homestay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&family=Lato:wght@300;400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .page-content {
-            padding: 150px 10%;
-            max-width: 800px;
-            z-index: 20;
-            position: relative;
-        }
-
-        .back-btn {
-            position: fixed;
-            top: 40px;
-            right: 40px;
-            cursor: pointer;
-            z-index: 100;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.2rem;
-            border-bottom: 1px solid white;
-            padding-bottom: 5px;
-            color: white;
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body class="subpage">
-    <div id="app">
-        <canvas id="canvas"></canvas>
-        <a href="index.html" class="back-btn">Back to Home</a>
+    <header class="header">
+        <a href="index.html" class="logo">RAINFOREST</a>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="food-dining.html">Food & Dining</a>
+        </nav>
+    </header>
 
-        <header>
-            <div class="logo">RAINFOREST</div>
-        </header>
+    <main class="page-container">
+        <!-- Hero Section: Using a blurred nature background as placeholder for dining -->
+        <section class="hero" style="background-image: url('assets/bg1.jpg'); background-position: center;"></section>
 
-        <main class="page-content">
-            <h2 class="sub-title">CULINARY</h2>
-            <h1 class="main-title">FOOD & DINING</h1>
-            <div class="description" style="max-width: 100%; opacity: 1;">
-                <p>Taste the essence of the forest. More content coming soon...</p>
+        <section class="subpage-content">
+            <h1>Farm-to-Table Dining</h1>
+            <p class="about-text">
+                At Tinchuley Gurung Homestay, every meal is a celebration of local flavors. We take pride in serving
+                wholesome, home-cooked food prepared with organic ingredients sourced directly from our own farm and
+                local markets.
+            </p>
+
+            <!-- Dining Features Container -->
+            <div class="rooms-container">
+                <!-- Feature 1: Organic Sourcing -->
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url('assets/bg3.jpg');"></div>
+                    <div class="room-details">
+                        <h2>Organic & Locally Sourced</h2>
+                        <p class="price" style="color: var(--warm-color); font-size: 1.2rem;">Fresh from the Farm</p>
+                        <p class="description">
+                            Our kitchen is fueled by nature. We grow our own seasonal vegetables like spinach,
+                            cauliflower, and beans without any chemicals. What we don't grow, we source fresh from the
+                            neighboring organic farms of Tinchuley.
+                        </p>
+                        <ul class="amenities-list">
+                            <li>100% Organic</li>
+                            <li>Farm Fresh</li>
+                            <li>Seasonal Menu</li>
+                            <li>Zero Preservatives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 2: All-Day Meals -->
+                <div class="room-card reverse">
+                    <div class="room-image" style="background-image: url('assets/homestay.jpg');"></div>
+                    <div class="room-details">
+                        <h2>All-Day Meal Plan</h2>
+                        <p class="price" style="color: var(--warm-color); font-size: 1.2rem;">Complete Culinary Care</p>
+                        <p class="description">
+                            Our standard package includes four wholesome meals a day to keep you energized for your
+                            adventures.
+                        </p>
+                        <div class="meal-grid"
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                            <div style="text-align: left;">
+                                <strong style="color: var(--earth-color);">Morning:</strong> Bed Tea & Cookies
+                            </div>
+                            <div style="text-align: left;">
+                                <strong style="color: var(--earth-color);">Breakfast:</strong> Puri Sabji / Tibetan
+                                Bread / Eggs
+                            </div>
+                            <div style="text-align: left;">
+                                <strong style="color: var(--earth-color);">Lunch:</strong> Rice, Dal, Organic Sabji, Egg
+                                Curry/Fish
+                            </div>
+                            <div style="text-align: left;">
+                                <strong style="color: var(--earth-color);">Dinner:</strong> Roti/Rice, Chicken
+                                Curry/Veg, Dessert
+                            </div>
+                        </div>
+                        <ul class="amenities-list">
+                            <li>Veg & Non-Veg Options</li>
+                            <li>Customizable Spice Levels</li>
+                            <li>Traditional Recipes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Traditional Flavors -->
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url('assets/bg2.jpg');"></div>
+                    <div class="room-details">
+                        <h2>Authentic Himalayan Flavors</h2>
+                        <p class="price" style="color: var(--warm-color); font-size: 1.2rem;">Taste of Culture</p>
+                        <p class="description">
+                            Experience the true taste of the hills with our special traditional dishes. From savory
+                            Gundruk (fermented leafy greens) to steaming hot Momos and Sel Roti, our home-cooked meals
+                            offer a delightful culinary journey into Gurung culture.
+                        </p>
+                        <ul class="amenities-list">
+                            <li>Gundruk & Sinki</li>
+                            <li>Homemade Pickles</li>
+                            <li>Sel Roti (On Request)</li>
+                            <li>Local Chicken</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </main>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('canvas').appendChild(renderer.domElement);
-
-        const tex = new THREE.TextureLoader().load('assets/bg2.jpg');
-        const geometry = new THREE.PlaneGeometry(2, 2);
-        const material = new THREE.MeshBasicMaterial({ map: tex, color: 0x333333 });
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-        camera.position.z = 1;
-
-        function animate() { requestAnimationFrame(animate); renderer.render(scene, camera); }
-        animate();
-
-        gsap.from(".main-title", { opacity: 0, y: 50, duration: 1.5, ease: "power4.out" });
-        gsap.from(".sub-title", { opacity: 0, x: -30, duration: 1, delay: 0.5 });
-        gsap.from(".description", { opacity: 0, duration: 2, delay: 1 });
-    </script>
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h2>Hungry for a mountain getaway?</h2>
+                    <p>Book your stay with us and enjoy complimentary meals included in your package. Let us know your
+                        dietary preferences!</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+919434380974" class="cta-btn">
+                            <span>&#9742;</span> +91 94343 80974
+                        </a>
+                        <a href="https://wa.me/919733000447" target="_blank" class="cta-btn">
+                            <span>&#128172;</span> +91 97330 00447
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
