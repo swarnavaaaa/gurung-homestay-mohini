@@ -60,11 +60,7 @@ body.subpage {
 /* Subpage Specific Header Styling */
 body.subpage .header {
     background-color: var(--text-color);
-    /* White/Cream Header */
     box-shadow: 0 4px 12px rgba(44, 110, 73, 0.1);
-    /* Greenish shadow */
-    /* Solid background for subpages */
-    /* Subtle shadow for separation */
 }
 
 /* Header Text Color on Subpages */
@@ -519,14 +515,14 @@ body.subpage .nav-menu a:hover {
     }
 }
 
-/* Footer Styles - Dark Theme for Contrast */
+/* Footer Styles - Compact/Optimized */
 .site-footer {
     background-color: var(--bg-color);
-    /* Deep Forest Green */
     color: #ffffff;
-    /* pure white text */
-    padding: 60px 5% 20px;
-    font-size: 0.9rem;
+    padding: 40px 5% 15px;
+    /* Reduced padding by ~30% */
+    font-size: 0.85rem;
+    /* Slightly smaller base text */
     margin-top: 0;
 }
 
@@ -534,25 +530,30 @@ body.subpage .nav-menu a:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
+    /* Reduced gap */
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
+    /* Reduced padding */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-column h3 {
     font-family: var(--font-main);
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem;
+    /* Reduced from 1.4rem */
+    margin-bottom: 10px;
+    /* Reduced margin */
     color: #ffffff;
 }
 
 .footer-column h4 {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 0.9rem;
+    /* Reduced from 1rem */
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -651,11 +652,13 @@ body.subpage .nav-menu a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 60px;
+    padding: 30px 40px;
+    /* Reduced padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: padding 0.3s;
 }
 
 .logo {
@@ -676,7 +679,8 @@ body.subpage .nav-menu a:hover {
     color: var(--text-color);
     text-decoration: none;
     font-size: 0.8rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
+    /* Slightly tighter */
     text-transform: uppercase;
     opacity: 0.7;
     transition: opacity 0.3s, border-bottom 0.3s;
@@ -708,6 +712,38 @@ body.subpage .nav-menu a:hover {
     color: var(--text-color);
 }
 
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+        /* Smaller header padding on mobile */
+        flex-direction: column;
+        gap: 15px;
+        background-color: rgba(44, 110, 73, 0.95);
+        /* Semi-transparent bg for readability */
+    }
+
+    body.subpage .header {
+        background-color: var(--text-color);
+        /* Maintain solid cream on subpages */
+    }
+
+    .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        font-size: 0.7rem;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+        /* Smaller hero text */
+    }
+}
+
 /* Hide scrollbar */
 .scroll-container::-webkit-scrollbar {
     display: none;
@@ -716,7 +752,9 @@ body.subpage .nav-menu a:hover {
 .scroll-container {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}/* Travelers Stories Section */
+}
+
+/* Travelers Stories Section */
 .stories-section {
     margin-top: 100px;
     text-align: center;
@@ -830,7 +868,9 @@ body.subpage .nav-menu a:hover {
         width: 300px;
         padding: 20px;
     }
-}/* Quote slide style */
+}
+
+/* Quote slide style */
 .content .quote-slide {
     font-family: 'Tinos', serif;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
