@@ -572,25 +572,26 @@ body.subpage .nav-menu a:hover {
     opacity: 1;
 }
 
-.directions-btn {
+.footer-column .directions-btn {
     padding: 8px 0;
     width: 150px;
-    /* Reduced to roughly half of typical side col width */
     background: var(--button-color);
     color: #000 !important;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     border: none;
     font-size: 0.85rem;
     transition: 0.3s;
+    margin-bottom: 25px;
+    /* Restoring margin that was lost from display: block */
 }
 
-.directions-btn:hover {
+.footer-column .directions-btn:hover {
     background: #FFA726;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 184, 77, 0.3);
