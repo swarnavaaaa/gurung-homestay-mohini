@@ -508,7 +508,7 @@ body.subpage .nav-menu a:hover {
 .site-footer {
     background: var(--bg-footer);
     color: #fff;
-    padding: 80px 5% 40px;
+    padding: 40px 5% 20px;
     font-size: 0.9rem;
 }
 
@@ -519,7 +519,7 @@ body.subpage .nav-menu a:hover {
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -538,14 +538,14 @@ body.subpage .nav-menu a:hover {
     font-size: 0.85rem;
     line-height: 1.6;
     opacity: 0.8;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
 }
 
 .footer-column h4 {
     font-family: var(--font-sans);
     font-size: 0.95rem;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     color: #fff;
     letter-spacing: 0.05em;
     font-weight: 700;
@@ -602,7 +602,7 @@ body.subpage .nav-menu a:hover {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 15px;
     opacity: 0.5;
     font-size: 0.8rem;
     display: flex;
