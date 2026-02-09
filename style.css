@@ -574,7 +574,7 @@ body.subpage .nav-menu a:hover {
 
 .directions-btn {
     padding: 8px 0;
-    width: 140px;
+    width: 150px;
     /* Reduced to roughly half of typical side col width */
     background: var(--button-color);
     color: #000 !important;
