@@ -248,9 +248,8 @@ body.subpage .nav-menu a:hover {
     position: relative;
     width: 100%;
     min-height: 220px;
-    background-image: linear-gradient(rgba(44, 110, 73, 0.7), rgba(44, 110, 73, 0.7)), url('assets/cta_bg.jpg');
-    /* Green overlay */
-    /* New image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/cta_bg.jpg');
+    /* Neutral black overlay */
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -260,7 +259,7 @@ body.subpage .nav-menu a:hover {
     align-items: flex-start;
     padding: 40px;
     text-align: left;
-    color: var(--text-color);
+    color: #ffffff;
     overflow: hidden;
 }
 
@@ -439,7 +438,7 @@ body.subpage .nav-menu a:hover {
     font-size: 1.8rem;
     line-height: 1.3;
     margin-bottom: 15px;
-    color: var(--text-color);
+    color: #ffffff;
 }
 
 .cta-content p {
@@ -447,7 +446,7 @@ body.subpage .nav-menu a:hover {
     margin-bottom: 20px;
     opacity: 0.9;
     line-height: 1.6;
-    color: var(--text-color);
+    color: #ffffff;
 }
 
 .cta-buttons {
@@ -483,6 +482,8 @@ body.subpage .nav-menu a:hover {
         /* 1 card on mobile */
         margin-right: 0;
     }
+
+
 
     .cta-section {
         padding: 30px 20px;
@@ -522,8 +523,8 @@ body.subpage .nav-menu a:hover {
 .site-footer {
     background-color: var(--bg-color);
     /* Deep Forest Green */
-    color: var(--text-color);
-    /* Cream/Off-White */
+    color: #ffffff;
+    /* pure white text */
     padding: 60px 5% 20px;
     font-size: 0.9rem;
     margin-top: 0;
@@ -537,15 +538,14 @@ body.subpage .nav-menu a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(254, 254, 227, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-column h3 {
     font-family: var(--font-main);
     font-size: 1.4rem;
     margin-bottom: 15px;
-    color: var(--accent-color);
-    /* Lighter Green Highlight */
+    color: #ffffff;
 }
 
 .footer-column h4 {
@@ -553,7 +553,7 @@ body.subpage .nav-menu a:hover {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
