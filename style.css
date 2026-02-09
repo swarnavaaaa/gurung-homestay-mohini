@@ -222,7 +222,7 @@ body.subpage .header {
     margin-top: 80px;
     position: relative;
     width: 100%;
-    min-height: 400px;
+    min-height: 220px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/cta_bg.jpg');
     /* New image */
     background-size: cover;
@@ -232,7 +232,7 @@ body.subpage .header {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 60px;
+    padding: 40px;
     text-align: left;
     color: white;
     overflow: hidden;
@@ -403,14 +403,14 @@ body.subpage .header {
 
 .cta-content h2 {
     font-family: var(--font-main);
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: 1.3;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .cta-content p {
-    font-size: 1rem;
-    margin-bottom: 30px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
     opacity: 0.9;
     line-height: 1.6;
 }
@@ -450,7 +450,7 @@ body.subpage .header {
     }
 
     .cta-section {
-        padding: 40px 20px;
+        padding: 30px 20px;
         text-align: center;
         align-items: center;
     }
