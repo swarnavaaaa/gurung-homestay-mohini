@@ -308,6 +308,12 @@ body.subpage .nav-menu a:hover {
     display: block;
 }
 
+.room-details .description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
 .amenities-list {
     display: flex;
     flex-wrap: wrap;
