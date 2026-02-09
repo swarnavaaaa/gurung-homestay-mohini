@@ -146,6 +146,8 @@ body.subpage .nav-menu a:hover {
 
 .carousel-track {
     display: flex;
+    gap: 30px;
+    /* Use gap instead of margin for precise spacing */
     transition: transform 0.5s ease-in-out;
     width: 100%;
 }
@@ -158,19 +160,16 @@ body.subpage .nav-menu a:hover {
 /* Card Updates - White background, Green text */
 .card {
     flex: 0 0 calc(50% - 15px);
-    /* 2 cards with gap */
-    margin-right: 30px;
-    /* Gap between cards */
+    /* 2 cards with gap mechanism */
     background-color: #fff;
     /* Pure white card for contrast against cream bg */
     border: 1px solid rgba(44, 110, 73, 0.1);
     color: var(--text-dark);
     padding: 25px;
-    /* Slightly reduced padding */
-    border-radius: 12px;
+    border-radius: 20px;
+    /* Increased curve */
     text-align: left;
     height: 320px;
-    /* Reduced from 380px */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
