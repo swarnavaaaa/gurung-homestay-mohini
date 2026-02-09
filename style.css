@@ -186,10 +186,10 @@ body.subpage .nav-menu a:hover {
 .content .quote-slide {
     font-family: 'Tinos', serif;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
-    font-style: italic;
+    font-style: normal;
     max-width: 900px;
     margin: 0 auto;
-    color: var(--accent);
+    color: var(--text-white);
 }
 
 #slide1 {
