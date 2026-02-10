@@ -57,9 +57,11 @@ body.subpage {
     transition: all 0.3s;
 }
 
-body.subpage .header {
+body.subpage .header,
+.header.scrolled {
     background-color: var(--text-white);
     box-shadow: 0 4px 12px rgba(27, 38, 36, 0.1);
+    padding: 15px 40px;
 }
 
 .logo {
@@ -71,7 +73,8 @@ body.subpage .header {
     text-decoration: none;
 }
 
-body.subpage .logo {
+body.subpage .logo,
+.header.scrolled .logo {
     color: var(--brand-primary);
 }
 
@@ -92,19 +95,24 @@ body.subpage .logo {
     padding-bottom: 5px;
 }
 
-body.subpage .nav-menu a {
+body.subpage .nav-menu a,
+.header.scrolled .nav-menu a {
     color: var(--brand-primary);
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a.active {
     opacity: 1;
-    color: var(--accent);
-    border-bottom: 1px solid var(--accent);
+    color: var(--alpenglow-gold) !important;
+    border-bottom: 2px solid var(--alpenglow-gold);
 }
 
-body.subpage .nav-menu a:hover {
-    color: var(--twilight-indigo);
-    border-bottom: 1px solid var(--twilight-indigo);
+body.subpage .nav-menu a:hover,
+body.subpage .nav-menu a.active,
+.header.scrolled .nav-menu a:hover,
+.header.scrolled .nav-menu a.active {
+    color: var(--twilight-indigo) !important;
+    border-bottom: 2px solid var(--twilight-indigo);
 }
 
 .page-container {
