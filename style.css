@@ -444,11 +444,14 @@ body.subpage .nav-menu a:hover {
 }
 
 .family-portrait {
+    display: block;
     width: 100%;
     max-width: 300px;
     aspect-ratio: 3/4;
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: 30px;
+    background-color: var(--twilight-indigo);
+    border-radius: 10px;
     /* transition: transform 0.3s ease; */
 }
 
