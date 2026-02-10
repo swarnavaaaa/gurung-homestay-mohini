@@ -408,6 +408,90 @@ body.subpage .nav-menu a:hover {
     color: var(--text-dark);
 }
 
+/* Family Section */
+.family-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.family-section h2 {
+    font-family: var(--font-main);
+    font-size: 2.2rem;
+    color: var(--brand-primary);
+    margin-bottom: 10px;
+}
+
+.family-subline {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 60px;
+    font-weight: 300;
+}
+
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.family-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.family-portrait {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 3/4;
+    object-fit: contain;
+    margin-bottom: 30px;
+    /* transition: transform 0.3s ease; */
+}
+
+/* .family-card:hover .family-portrait {
+    transform: scale(1.05);
+} */
+
+.family-name {
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.family-title {
+    font-family: var(--font-main);
+    font-style: italic;
+    color: var(--alpenglow-gold);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.family-bio {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    opacity: 0.8;
+    max-width: 320px;
+}
+
+@media (max-width: 900px) {
+    .family-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .family-bio {
+        max-width: 450px;
+    }
+}
+
 /* CTA Section */
 .cta-section {
     margin: 80px 0;
