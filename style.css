@@ -290,6 +290,52 @@ body.subpage .nav-menu a.active,
     border-radius: 12px;
     background-size: cover;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Carousel Specifics */
+.carousel-container {
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #fff;
+    width: 20px;
+    border-radius: 10px;
 }
 
 .room-details {
