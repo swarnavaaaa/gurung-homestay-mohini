@@ -309,8 +309,11 @@ body.subpage .nav-menu a.active,
 .carousel-slide {
     flex: 0 0 100%;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #F5F5F0;
+    /* Matching your card background */
 }
 
 .carousel-dots {
