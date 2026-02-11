@@ -101,18 +101,14 @@ body.subpage .nav-menu a,
 }
 
 .nav-menu a:hover,
-.nav-menu a.active {
-    opacity: 1;
-    color: var(--alpenglow-gold) !important;
-    border-bottom: 2px solid var(--alpenglow-gold);
-}
-
+.nav-menu a.active,
 body.subpage .nav-menu a:hover,
 body.subpage .nav-menu a.active,
 .header.scrolled .nav-menu a:hover,
 .header.scrolled .nav-menu a.active {
-    color: var(--twilight-indigo) !important;
-    border-bottom: 2px solid var(--twilight-indigo);
+    opacity: 1;
+    color: var(--alpenglow-gold) !important;
+    border-bottom: 2px solid var(--alpenglow-gold);
 }
 
 .page-container {
