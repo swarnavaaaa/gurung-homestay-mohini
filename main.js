@@ -74,7 +74,7 @@ carousels.forEach(carousel => {
         updateCarousel(slideIndex);
     };
 
-    let carouselInterval = setInterval(nextSlide, 4000); // 4 seconds interval
+    let carouselInterval = setInterval(nextSlide, 2000); // 2 seconds interval
 
     // Manual control via dots
     dots.forEach((dot, index) => {
@@ -82,11 +82,11 @@ carousels.forEach(carousel => {
             clearInterval(carouselInterval);
             slideIndex = index;
             updateCarousel(slideIndex);
-            carouselInterval = setInterval(nextSlide, 4000);
+            carouselInterval = setInterval(nextSlide, 2000);
         });
     });
 
     // Pause on hover
     carousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
-    carousel.addEventListener('mouseleave', () => carouselInterval = setInterval(nextSlide, 4000));
+    carousel.addEventListener('mouseleave', () => carouselInterval = setInterval(nextSlide, 2000));
 });
