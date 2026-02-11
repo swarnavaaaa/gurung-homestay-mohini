@@ -308,12 +308,13 @@ body.subpage .nav-menu a.active,
 
 .carousel-slide {
     flex: 0 0 100%;
+    width: 100%;
     height: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #F5F5F0;
-    /* Matching your card background */
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-color: #F8F8F8;
+    /* Neutral light background */
 }
 
 .carousel-dots {
@@ -330,13 +331,14 @@ body.subpage .nav-menu a.active,
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     transition: background 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .dot.active {
-    background: #fff;
+    background: var(--alpenglow-gold);
     width: 20px;
     border-radius: 10px;
 }
