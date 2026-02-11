@@ -667,7 +667,7 @@ body.subpage .nav-menu a.active,
     padding: 8px 0;
     width: 150px;
     background: var(--button-color);
-    color: #000 !important;
+    color: #fff !important;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
