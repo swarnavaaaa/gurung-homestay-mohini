@@ -666,17 +666,19 @@ body.subpage .nav-menu a.active,
 .footer-column .directions-btn {
     padding: 8px 0;
     width: 150px;
-    background: var(--button-color);
+    background: #D98C2D;
+    /* Slightly darker gold for better white text contrast */
     color: #fff !important;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     border: none;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     margin-bottom: 25px;
     /* Restoring margin that was lost from display: block */
