@@ -291,9 +291,26 @@ body.subpage .nav-menu a.active,
     height: 400px;
     border-radius: 12px;
     background-size: cover;
+    background-position: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+}
+
+.room-image.room-image-carousel {
+    width: 50%;
+    height: auto;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
 /* Carousel Specifics */

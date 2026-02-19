@@ -94,6 +94,7 @@ carousels.forEach(carousel => {
 
 // Room Image Carousel
 const roomCarousel = document.getElementById('roomCarousel');
+const carouselImage = document.getElementById('carouselImage');
 const roomDots = document.querySelectorAll('.carousel-dot');
 
 const roomImages = [
@@ -107,13 +108,14 @@ const roomImages = [
 let roomIndex = 0;
 let roomInterval;
 
-// Initialize first image
-if (roomCarousel) {
-    roomCarousel.style.backgroundImage = `url('${roomImages[0]}')`;
+// Initialize
+if (roomCarousel && carouselImage) {
+    // Set initial image (already in HTML, but good for consistency)
+    carouselImage.src = roomImages[0];
 
     function updateRoomCarousel(index) {
-        // Update Image
-        roomCarousel.style.backgroundImage = `url('${roomImages[index]}')`;
+        // Update Image Source
+        carouselImage.src = roomImages[index];
 
         // Update Dots
         if (roomDots && roomDots.length > 0) {
