@@ -90,3 +90,57 @@ carousels.forEach(carousel => {
     carousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
     carousel.addEventListener('mouseleave', () => carouselInterval = setInterval(nextSlide, 2000));
 });
+
+
+// Room Image Carousel
+const roomCarousel = document.getElementById('roomCarousel');
+const roomDots = document.querySelectorAll('.carousel-dot');
+
+const roomImages = [
+    'assets/out%201.jpeg',
+    'assets/out%202.jpeg',
+    'assets/out%203.jpeg',
+    'assets/out%204.jpeg',
+    'assets/out%205.jpeg'
+];
+
+let roomIndex = 0;
+let roomInterval;
+
+// Initialize first image
+if (roomCarousel) {
+    roomCarousel.style.backgroundImage = `url('${roomImages[0]}')`;
+
+    function updateRoomCarousel(index) {
+        // Update Image
+        roomCarousel.style.backgroundImage = `url('${roomImages[index]}')`;
+
+        // Update Dots
+        if (roomDots && roomDots.length > 0) {
+            roomDots.forEach(dot => dot.classList.remove('active'));
+            if (roomDots[index]) {
+                roomDots[index].classList.add('active');
+            }
+        }
+    }
+
+    function nextRoomSlide() {
+        roomIndex = (roomIndex + 1) % roomImages.length;
+        updateRoomCarousel(roomIndex);
+    }
+
+    // Auto Scroll every 3 seconds
+    roomInterval = setInterval(nextRoomSlide, 3000);
+
+    // Manual Click
+    if (roomDots) {
+        roomDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(roomInterval);
+                roomIndex = index;
+                updateRoomCarousel(roomIndex);
+                roomInterval = setInterval(nextRoomSlide, 3000); // Restart timer
+            });
+        });
+    }
+}
