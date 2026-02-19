@@ -503,8 +503,8 @@ body.subpage .nav-menu a.active,
     display: block;
     width: 100%;
     max-width: 300px;
-    aspect-ratio: 3/4;
-    object-fit: cover;
+    height: 400px;
+    object-fit: contain;
     margin-bottom: 30px;
     border-radius: 10px;
     background-color: transparent !important;
