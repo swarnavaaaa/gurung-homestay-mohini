@@ -92,57 +92,66 @@ carousels.forEach(carousel => {
 });
 
 
-// Room Image Carousel
-const roomCarousel = document.getElementById('roomCarousel');
-const carouselImage = document.getElementById('carouselImage');
-const roomDots = document.querySelectorAll('.carousel-dot');
+// Room Image Carousel - Reusable Function
+function initRoomCarousel(carouselId, imageElementId, images) {
+    const container = document.getElementById(carouselId);
+    if (!container) return; // Exit if element doesn't exist
 
-const roomImages = [
+    const imageElement = document.getElementById(imageElementId);
+    if (!imageElement) return;
+
+    // Scope dots to this specific carousel container
+    const dots = container.querySelectorAll('.carousel-dot');
+
+    let currentIndex = 0;
+    let interval;
+
+    // Set initial image
+    if (images.length > 0) {
+        imageElement.src = images[0];
+    }
+
+    const updateSlide = (index) => {
+        imageElement.src = images[index];
+
+        if (dots.length > 0) {
+            dots.forEach(d => d.classList.remove('active'));
+            if (dots[index]) dots[index].classList.add('active');
+        }
+    };
+
+    const nextSlide = () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlide(currentIndex);
+    };
+
+    // Auto Scroll
+    interval = setInterval(nextSlide, 3000);
+
+    // Manual Navigation
+    if (dots.length > 0) {
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                clearInterval(interval);
+                currentIndex = idx;
+                updateSlide(currentIndex);
+                interval = setInterval(nextSlide, 3000); // Restart timer
+            });
+        });
+    }
+}
+
+// Initialize Scenic Outlook Rooms Carousel
+initRoomCarousel('roomCarousel', 'carouselImage', [
     'assets/out%201.jpeg',
     'assets/out%202.jpeg',
     'assets/out%203.jpeg',
     'assets/out%204.jpeg',
     'assets/out%205.jpeg'
-];
+]);
 
-let roomIndex = 0;
-let roomInterval;
-
-// Initialize
-if (roomCarousel && carouselImage) {
-    // Set initial image (already in HTML, but good for consistency)
-    carouselImage.src = roomImages[0];
-
-    function updateRoomCarousel(index) {
-        // Update Image Source
-        carouselImage.src = roomImages[index];
-
-        // Update Dots
-        if (roomDots && roomDots.length > 0) {
-            roomDots.forEach(dot => dot.classList.remove('active'));
-            if (roomDots[index]) {
-                roomDots[index].classList.add('active');
-            }
-        }
-    }
-
-    function nextRoomSlide() {
-        roomIndex = (roomIndex + 1) % roomImages.length;
-        updateRoomCarousel(roomIndex);
-    }
-
-    // Auto Scroll every 3 seconds
-    roomInterval = setInterval(nextRoomSlide, 3000);
-
-    // Manual Click
-    if (roomDots) {
-        roomDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                clearInterval(roomInterval);
-                roomIndex = index;
-                updateRoomCarousel(roomIndex);
-                roomInterval = setInterval(nextRoomSlide, 3000); // Restart timer
-            });
-        });
-    }
-}
+// Initialize Inward Facing Rooms Carousel
+initRoomCarousel('inwardCarousel', 'inwardImage', [
+    'assets/Indoor%201.jpeg',
+    'assets/Indoor%202.jpeg'
+]);
