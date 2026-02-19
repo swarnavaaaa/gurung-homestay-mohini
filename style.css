@@ -130,11 +130,8 @@ body.subpage .nav-menu a.active,
 }
 
 .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-    /* Revert to original dark overlay */
+    display: none;
+    /* Removed dark tint */
 }
 
 .subpage-content {
@@ -510,6 +507,8 @@ body.subpage .nav-menu a.active,
     object-fit: cover;
     margin-bottom: 30px;
     border-radius: 10px;
+    background-color: transparent !important;
+    filter: none !important;
     /* transition: transform 0.3s ease; */
 }
 
