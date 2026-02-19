@@ -115,6 +115,11 @@ body.subpage .nav-menu a.active,
     padding-top: 100px;
 }
 
+/* Specific brightness fix for Mrs. Gurung's image */
+.family-grid .family-card:nth-child(2) .family-portrait {
+    filter: brightness(1.1) !important;
+}
+
 /* Hero & Slides */
 .hero {
     height: 50vh;
