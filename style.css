@@ -467,6 +467,7 @@ body.subpage .nav-menu a.active,
 .family-section {
     padding: 80px 0;
     text-align: center;
+    background-color: #ffffff;
 }
 
 .family-section h2 {
@@ -496,6 +497,9 @@ body.subpage .nav-menu a.active,
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .family-portrait {
@@ -505,7 +509,6 @@ body.subpage .nav-menu a.active,
     aspect-ratio: 3/4;
     object-fit: cover;
     margin-bottom: 30px;
-    background-color: var(--twilight-indigo);
     border-radius: 10px;
     /* transition: transform 0.3s ease; */
 }
