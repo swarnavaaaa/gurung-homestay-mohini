@@ -504,7 +504,8 @@ body.subpage .nav-menu a.active,
     width: 100%;
     max-width: 300px;
     height: 400px;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: top;
     margin-bottom: 30px;
     border-radius: 10px;
     background-color: transparent !important;
