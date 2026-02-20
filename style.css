@@ -112,7 +112,7 @@ body.subpage .nav-menu a.active,
 }
 
 .page-container {
-    padding-top: 65px;
+    padding-top: 0;
 }
 
 /* Specific brightness fix for Mrs. Gurung's image */
@@ -334,7 +334,7 @@ body.subpage .nav-menu a.active,
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-color: #ffffff;
