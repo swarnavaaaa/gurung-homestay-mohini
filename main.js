@@ -155,3 +155,9 @@ initRoomCarousel('inwardCarousel', 'inwardImage', [
     'assets/Indoor%201.jpeg',
     'assets/Indoor%202.jpeg'
 ]);
+
+// Initialize Nature Walks Carousel
+initRoomCarousel('natureCarousel', 'natureImage', [
+    'assets/nature%20walk%201.jpeg',
+    'assets/nature%20walk%202.jpeg'
+]);
