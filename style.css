@@ -120,6 +120,11 @@ body.subpage .nav-menu a.active,
     filter: brightness(1.1) !important;
 }
 
+/* Specific brightness fix for Mohini's image */
+.family-grid .family-card:nth-child(3) .family-portrait {
+    filter: brightness(1.15) contrast(1.1) !important;
+}
+
 /* Hero & Slides */
 .hero {
     height: 50vh;
