@@ -127,7 +127,7 @@ body.subpage .nav-menu a.active,
 
 /* Hero & Slides */
 .hero {
-    height: 50vh;
+    height: 70vh;
     width: 100vw;
     display: flex;
     justify-content: center;
