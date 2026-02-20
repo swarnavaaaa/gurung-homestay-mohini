@@ -215,6 +215,27 @@ body.subpage .nav-menu a.active,
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/bg3.jpg');
 }
 
+.explore-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 48px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
 /* Marquee Container */
 .marquee-container {
     overflow: hidden;
