@@ -161,3 +161,21 @@ initRoomCarousel('natureCarousel', 'natureImage', [
     'assets/nature%20walk%201.jpeg',
     'assets/nature%20walk%202.jpeg'
 ]);
+
+// Initialize Tea Garden Carousel
+initRoomCarousel('teaCarousel', 'teaImage', [
+    'assets/tea%20garden%201.jpeg',
+    'assets/tea%20garden%202.jpeg'
+]);
+
+// Initialize Sunrise Carousel
+initRoomCarousel('sunriseCarousel', 'sunriseImage', [
+    'assets/sunrise%201.jpeg',
+    'assets/sunrise%202.jpeg'
+]);
+
+// Initialize Bonfire Carousel
+initRoomCarousel('bonfireCarousel', 'bonfireImage', [
+    'assets/experiences_1.jpg',
+    'assets/experiences_2.jpg'
+]);
