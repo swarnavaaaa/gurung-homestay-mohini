@@ -128,12 +128,13 @@ body.subpage .nav-menu a.active,
 /* Hero & Slides */
 .hero {
     height: 70vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center;
+    background-attachment: scroll;
     text-align: center;
     padding: 20px;
     position: relative;
@@ -184,7 +185,15 @@ body.subpage .nav-menu a.active,
     align-items: center;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
+    /* fixed causes bugs on iOS/Android */
+}
+
+/* Parallax only on desktop where it works correctly */
+@media (min-width: 901px) {
+    .slide {
+        background-attachment: fixed;
+    }
 }
 
 .content {
