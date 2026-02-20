@@ -187,6 +187,13 @@ body.subpage .nav-menu a.active,
     background-attachment: fixed;
 }
 
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .content h1 {
     font-family: 'Tinos', serif;
     font-size: clamp(2.5rem, 8vw, 5rem);
@@ -216,23 +223,25 @@ body.subpage .nav-menu a.active,
 }
 
 .explore-btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 48px;
+    display: block;
+    width: fit-content;
+    margin: 36px auto 0;
+    padding: 21px 72px;
     border: 2px solid #ffffff;
+    border-radius: 12px;
     color: #ffffff;
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: 1.35rem;
     font-weight: 400;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    letter-spacing: 1px;
     text-decoration: none;
     background: transparent;
     transition: background 0.3s ease, color 0.3s ease;
+    text-align: center;
 }
 
 .explore-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.18);
     color: #ffffff;
 }
 
