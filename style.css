@@ -924,9 +924,14 @@ body.subpage .nav-menu a.active,
         gap: 16px;
     }
 
+    .page-container {
+        padding-top: 100px;
+    }
+
     /* Hero */
     .hero {
-        height: 45vh;
+        height: 50vh;
+        background-position: center bottom !important;
     }
 
     /* Subpage content */
@@ -1009,13 +1014,18 @@ body.subpage .nav-menu a.active,
         gap: 10px 16px;
     }
 
+    .page-container {
+        padding-top: 140px;
+    }
+
     .nav-menu a {
         font-size: 0.72rem;
     }
 
     /* Hero */
     .hero {
-        height: 38vh;
+        height: 40vh;
+        background-position: center bottom !important;
     }
 
     /* Homepage slide text */
